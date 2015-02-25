@@ -1,0 +1,12 @@
+<h1>POSTS INDEX</h1>
+
+{{#each post in model}}
+
+<p>
+{{#link-to "comments.index" post}}
+  {{post.title}}
+  {{/link-to}}
+</p>
+  {{/each}}
+
+{{link-to "Submit Post" "posts.new"}}

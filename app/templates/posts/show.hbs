@@ -1,0 +1,26 @@
+<h2><a {{bind-attr href=model.link}}>{{model.title}} </a></h2>
+<h5>Submitted By {{model.username}}</h5>
+
+<p>
+{{model.description}}
+</p>
+
+
+<button {{action 'deletePost' model}}>Delete</button>
+
+
+{{link-to "Back" "posts.index"}}
+
+{{link-to 'Edit' 'posts.edit' model}}
+
+<p>
+{{link-to "Comment on this post" "comments.new"}}
+</p>
+
+<p>
+{{link-to "View Comments" "comments.index"}}
+</p>
+
+<h2>COMMENTS (still on Show page!)</h2>
+
+{{outlet}}

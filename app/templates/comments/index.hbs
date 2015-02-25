@@ -1,0 +1,10 @@
+<h5>COMMENTS INDEX</h5>
+
+
+{{#each comment in model.comments}}
+<li>
+  <strong>{{comment.username}}</strong> -- {{comment.body}}
+<button {{action "deleteComment" comment}}> X </button> |
+  {{link-to "EDIT" "comments.edit" comment}}
+</li>
+{{/each}}
